@@ -51,8 +51,8 @@
   <select id="getList" parameterType="java.util.Map" resultType="java.util.Map">
     select <include refid="Base_Column_List"/> from user_t WHERE  1=1;
   </select>
-  <select id="getInfoByEId" resultType="java.util.Map">
-      SELECT  * FROM user_t WHERE 1=1
+  <select id="getInfoById" resultType="java.util.Map">
+      SELECT  * FROM  user_t WHERE 1=1
 
   </select>
 </mapper>

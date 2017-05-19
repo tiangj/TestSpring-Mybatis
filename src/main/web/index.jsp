@@ -11,6 +11,10 @@
     <title>$Title$</title>
   </head>
   <body>
+      <form action="test/uploadFile.do" method="post"  enctype="multipart/form-data">
+          文件:<input type="file" name="fileName">
+        <input type="submit" value="提交">
+      </form>
   $END$
   </body>
 </html>

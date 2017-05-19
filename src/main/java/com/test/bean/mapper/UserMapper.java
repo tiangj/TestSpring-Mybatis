@@ -13,5 +13,5 @@ public interface UserMapper{
 
     List<Map<String,Object>> getList(Map<String,Object> map);
 
-    Map<String,Object> getInfoByEId(String id);
+    Map<String,Object> getInfoById(String id);
 }
