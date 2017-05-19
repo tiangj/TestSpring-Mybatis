@@ -1,3 +1,2 @@
 # TestSpring-Mybatis
-测试
-Spring mybatis 集成
+Spring SpringMVC mybatis 集成
