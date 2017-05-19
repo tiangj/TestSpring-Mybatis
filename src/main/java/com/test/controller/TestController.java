@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,10 @@ import java.util.Map;
 @Controller
 @RequestMapping("/test")
 public class TestController {
+
+    //request对象
+    @Autowired
+    private HttpServletRequest request;
 
     @Autowired
     private ITestService testService;
@@ -35,12 +40,13 @@ public class TestController {
     }
 
     /**
-     * 测试spring-mybatis(info测试)
+     * 测试spring-mybatis
      * @return
      */
     @RequestMapping("/getList")
     @ResponseBody
     public List<Map<String,Object>> getList(){
+        System.out.print(request.getContextPath());
         Map<String,Object> map=new HashMap<String,Object>();
         return userService.getList(map);
     }
