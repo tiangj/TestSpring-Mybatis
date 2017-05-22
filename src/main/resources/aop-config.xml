@@ -10,6 +10,7 @@
 
     <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
 
+    <!--测试aop相关配置-->
     <aop:config>
         <aop:aspect id="aopTest" ref="testAop">
             <aop:pointcut id="sysInfo" expression="execution(* com.test.controller.TestController.hello())"></aop:pointcut>
