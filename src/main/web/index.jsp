@@ -12,7 +12,8 @@
   </head>
   <body>
       <form action="test/uploadFile.do" method="post"  enctype="multipart/form-data">
-          文件:<input type="file" name="fileName">
+          文件:<input type="file" name="fileName"><br/>
+          文件1:<input type="file" name="fileNameInfo">
         <input type="submit" value="提交">
       </form>
   $END$
