@@ -53,6 +53,5 @@
   </select>
   <select id="getInfoById" resultType="java.util.Map">
       SELECT  * FROM  user_t WHERE 1=1
-
   </select>
 </mapper>
