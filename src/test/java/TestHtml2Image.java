@@ -1,5 +1,7 @@
 import gui.ava.html.image.generator.HtmlImageGenerator;
 
+import java.awt.*;
+
 /**
  * Created by admin on 2017/6/5.
  * 测试html转image
@@ -28,6 +30,12 @@ public class TestHtml2Image
         htmlImageGenerator.loadHtml(htmlStr);
         //加载链接的url地址
 //        htmlImageGenerator.loadUrl("");
+
+        //设置图片的大小
+        Dimension dimension=new Dimension();
+        dimension.setSize(200,50);
+        htmlImageGenerator.setSize(dimension);
+
         //保存生成的图片
         htmlImageGenerator.saveAsImage("d:/hello-world.png");
     }
