@@ -16,16 +16,16 @@
     <import resource="spring-mybatis.xml"></import>
 
     <!--配置日志文件的目录(避免因环境不同导致日志存放的目录不同)-->
-    <bean id="log4jInitialization"
-          class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass"
-                  value="org.springframework.util.Log4jConfigurer" />
-        <property name="targetMethod" value="initLogging" />
-        <property name="arguments">
-            <list>
-                <value>classpath:log4j.properties</value>
-                <!--<value>classpath:log4j_linux.properties</value>-->
-            </list>
-        </property>
-    </bean>
+    <!--<bean id="log4jInitialization"-->
+          <!--class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">-->
+        <!--<property name="targetClass"-->
+                  <!--value="org.springframework.util.Log4jConfigurer" />-->
+        <!--<property name="targetMethod" value="initLogging" />-->
+        <!--<property name="arguments">-->
+            <!--<list>-->
+                <!--<value>classpath:log4j.properties</value>-->
+                <!--&lt;!&ndash;<value>classpath:log4j_linux.properties</value>&ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 </beans>
