@@ -2,9 +2,11 @@ package com.test.controller;
 
 import com.test.service.ITestService;
 import com.test.service.IUserService;
+import com.test.util.BaseConditionVO;
 import com.test.util.FileUploadUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -37,9 +39,12 @@ public class TestController {
      * @return
      */
     @RequestMapping("/hello")
-    @ResponseBody
-    public String hello() {
-        return testService.hello();
+//    @ResponseBody
+    public String hello(BaseConditionVO vo,Model model) {
+        vo.setTotalCount(100);
+//
+        model.addAttribute("vo", vo);
+        return "hello";
     }
 
     /**
